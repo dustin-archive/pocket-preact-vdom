@@ -6,7 +6,8 @@
   },
   "dependencies": {
     "@whaaaley/material-icons-scss": "^4.0.3",
-    "preact": "^10.5.13"
+    "preact": "^10.5.13",
+    "superfine": "^8.2.0"
   },
   "devDependencies": {
     "clean-css": "^5.1.2",

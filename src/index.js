@@ -1,13 +1,24 @@
 
+// import { readFileSync } from 'fs'
+// import { h } from 'pocket/superfine-shim'
+//
+// const styles = process.env.PROD === true
+//   ? h('style', {}, readFileSync('./public/main.css', 'utf8'))
+//   : <link rel='stylesheet' href='/main.css'/>
+//
+// const scripts = process.env.PROD === true
+//   ? h('script', {}, readFileSync('./public/app.js', 'utf8'))
+//   : <script src='/app.js' defer></script>
+
 import { readFileSync } from 'fs'
-import { script, style } from 'pocket/html'
+import { jsx } from 'pocket/preact-shim'
 
 const styles = process.env.PROD === true
-  ? style(readFileSync('./public/main.css', 'utf8'))
+  ? jsx('style', {}, readFileSync('./public/main.css', 'utf8'))
   : <link rel='stylesheet' href='/main.css'/>
 
 const scripts = process.env.PROD === true
-  ? script(readFileSync('./public/app.js', 'utf8'))
+  ? jsx('script', {}, readFileSync('./public/app.js', 'utf8'))
   : <script src='/app.js' defer></script>
 
 const render = data => {

@@ -4,6 +4,7 @@ const year = new Date().getFullYear()
 
 const jsx = {
   inject: ['./src/modules/pocket/preact-shim.js'],
+  // inject: ['./src/modules/pocket/superfine-shim.js'],
   jsxFactory: 'jsx',
   loader: {
     '.js': 'jsx'
@@ -21,9 +22,7 @@ module.exports = {
       define: {
         'process.env.PROD': production,
         'process.env.STATIC': false,
-        'process.env.YEAR': year,
-        'PROD': production,
-        'STATIC': false
+        'process.env.YEAR': year
       }
     },
     html: {
@@ -35,9 +34,7 @@ module.exports = {
       define: {
         'process.env.PROD': production,
         'process.env.STATIC': true,
-        'process.env.YEAR': year,
-        'PROD': production,
-        'STATIC': true
+        'process.env.YEAR': year
       }
     }
   },

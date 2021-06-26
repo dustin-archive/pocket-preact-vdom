@@ -1,9 +1,11 @@
 
 import { pocket } from 'pocket/index'
 import { render } from 'preact'
+// import { patch } from 'superfine'
 
 const node = document.getElementById('app')
 const app = init => pocket(init, view => render(view, node))
+// const app = init => pocket(init, view => patch(node, view))
 
 const Home = {
   view: (state, dispatch) => {
