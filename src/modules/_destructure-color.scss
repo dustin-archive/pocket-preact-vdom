@@ -1,0 +1,10 @@
+
+@use 'sass:color';
+
+@function destructure-color($color) {
+  $red: color.red($color);
+  $green: color.green($color);
+  $blue: color.blue($color);
+
+  @return '#{$red}, #{$green}, #{$blue}';
+}
